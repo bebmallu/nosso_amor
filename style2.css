@@ -404,3 +404,58 @@ body {
     transform:rotate(8deg);
     z-index:2;
 }
+
+.editable-card textarea,
+.editable-card input {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 13px;
+  margin-bottom: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.editable-card textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.lista-mensagens,
+.lista-musicas {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-msg,
+.item-musica {
+  background: rgba(0,0,0,.25);
+  padding: 14px;
+  border-radius: 14px;
+  color: #f4e7e3;
+}
+
+.item-msg p {
+  line-height: 1.6;
+}
+
+.item-musica strong {
+  display: block;
+  font-size: 17px;
+}
+
+.item-musica span {
+  color: #cfc0bc;
+  font-size: 14px;
+}
+
+.btn-apagar {
+  margin-top: 10px;
+  background: #ff4f7b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 12px;
+}
