@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velhos românticos</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="script" href="script2.js" />
+   
+</head>
+
+<body>
+
+  <main class="app">
+
+    <header class="top">
+      <span>⌄</span>
+      <h1>Velhos românticos</h1>
+      <span>•••</span>
+    </header>
+
+    <section class="carousel-area">
+      <div class="carousel-container">
+  <div class="carousel" id="carousel">
+    <img src="foto1.jpg" class="slide">
+    <img src="foto2.jpg" class="slide">
+    <img src="foto3.jpg" class="slide">
+    <img src="foto4.jpg" class="slide">
+  </div>
+</div>
+
+<div class="dots" id="dots">
+  <span class="active"></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+    </section>
+
+    <section class="song-info">
+      <h2 id="songTitle">16. Assassinos de Saudade</h2>
+      <p id="artistName">BACO EXU DO BLUES</p>
+    </section>
+
+    <section class="progress-area">
+      <input type="range" id="progress" value="0" min="0" max="100" />
+      <div class="time">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="prevBtn">⏮</button>
+      <button id="playBtn" class="play">▶</button>
+      <button id="nextBtn">⏭</button>
+    </section>
+
+    <section class="about-card">
+      <h2>Sobre nós</h2>
+
+      <img src="foto5.jpg" class="about-img" />
+
+      <div class="about-text">
+        <h3>Maria Luiza e Leonardo Henrique</h3>
+        <p>Juntos desde 2025</p>
+      </div>
+
+        <div class="counter">
+
+    <div class="box">
+        <strong id="years">0</strong>
+        <span>anos</span>
+    </div>
+
+    <div class="box">
+        <strong id="months">0</strong>
+        <span>meses</span>
+    </div>
+
+    <div class="box">
+        <strong id="days">0</strong>
+        <span>dias</span>
+    </div>
+
+    <div class="box">
+        <strong id="hours">0</strong>
+        <span>horas</span>
+    </div>
+
+    <div class="box">
+        <strong id="minutes">0</strong>
+        <span>minutos</span>
+    </div>
+
+    <div class="box">
+        <strong id="seconds">0</strong>
+        <span>segundos</span>
+    </div>
+
+</div>
+      
+    </section>
+    
+
+    <section class="lyrics-card">
+      <h2>Mensagem Especial</h2>
+
+     <section class="message-card">
+
+    <div class="message-header">
+
+        <h2>💌 Mensagem Especial</h2>
+    </div>
+
+    <div id="messageContent" class="message-content">
+
+        <p>
+            Tem dias que eu olho pra você e penso:
+            como eu tive tanta sorte?<br>
+            Não é exagero. É só que, com você,
+            tudo faz sentido.<br>
+            Até o caos do mundo parece mais leve
+            quando estou do seu lado.
+            Obrigado por existir.<br>
+            Obrigado por ser tão você.
+            ❤️ <strong>EU AMO VOCÊ MEU AMOR</strong>
+        </p>
+
+    </div>
+
+</section>
+        
+      
+    </section>
+
+    
+<section class="memory-card">
+
+    <h2>O céu no nosso dia</h2>
+
+    <img src="estrelas.jpg" class="memory-photo">
+
+    <div class="memory-text">
+
+        <h3>18 de Abril de 2025</h3>
+
+        <p>
+            Enquanto nossa história começava,
+            milhares de estrelas iluminavam o céu.
+            Talvez elas já soubessem que esse dia
+            se tornaria um dos mais especiais da minha vida.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="editable-card">
+  <h2>🎵 Músicas Especiais</h2>
+
+  <input type="text" id="novaMusica"
+         placeholder="Nome da música">
+
+  <button onclick="adicionarMusica()">
+    Adicionar
+  </button>
+
+  <ul id="listaMusicas"></ul>
+</section> 
+
+<section class="editable-card">
+  <h2>🎯 Nossos Sonhos</h2>
+
+  <input type="text"
+         id="metaCasal"
+         placeholder="Ex: Viajar para Gramado">
+
+  <button onclick="adicionarMeta()">
+    Adicionar
+  </button>
+
+  <ul id="listaMetas"></ul>
+</section>
+
+
+<section class="editable-card">
+  <h2>📸 Nossas Memórias</h2>
+
+  <input type="file" id="fotoMemoria" accept="image/*">
+
+  <button onclick="adicionarFoto()">Adicionar foto</button>
+
+  <div id="galeriaTrios" class="galeria-trios"></div>
+</section>
+
+ <footer class="footer-love">
+
+    <div class="footer-heart">
+        ❤️
+    </div>
+
+    <h2>Maria Luiza & Leonardo Henrique</h2>
+
+    <p>
+        Feito com amor, músicas,
+        memórias e sonhos.
+    </p>
+
+    <div class="footer-counter">
+        <span id="diasJuntos">
+            Carregando...
+        </span>
+    </div>
+
+</footer>
+  </main>
+
+<audio id="audio" src="musica1.mp3"></audio>
+
+  <script src="script2.js"></script>
+
+
+</body>
+</html>
