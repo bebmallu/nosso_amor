@@ -305,3 +305,127 @@ if(toggleMessage){
     });
 
 }
+
+let mensagensSalvas =
+  JSON.parse(localStorage.getItem("mensagensAmor")) || [];
+
+let musicasSalvas =
+  JSON.parse(localStorage.getItem("musicasAmor")) || [];
+
+function adicionarMensagem() {
+  const input = document.getElementById("novaMensagem");
+  const texto = input.value.trim();
+
+  if (texto === "") {
+    alert("Escreva uma mensagem primeiro ❤️");
+    return;
+  }
+
+  mensagensSalvas.push(texto);
+
+  localStorage.setItem(
+    "mensagensAmor",
+    JSON.stringify(mensagensSalvas)
+  );
+
+  input.value = "";
+  mostrarMensagens();
+}
+
+function mostrarMensagens() {
+  const lista = document.getElementById("listaMensagens");
+
+  if (!lista) return;
+
+  lista.innerHTML = "";
+
+  mensagensSalvas.forEach((mensagem, index) => {
+    const item = document.createElement("div");
+    item.className = "item-msg";
+
+    item.innerHTML = `
+      <p>${mensagem}</p>
+      <button class="btn-apagar" onclick="apagarMensagem(${index})">
+        Apagar
+      </button>
+    `;
+
+    lista.appendChild(item);
+  });
+}
+
+function apagarMensagem(index) {
+  mensagensSalvas.splice(index, 1);
+
+  localStorage.setItem(
+    "mensagensAmor",
+    JSON.stringify(mensagensSalvas)
+  );
+
+  mostrarMensagens();
+}
+
+function adicionarMusica() {
+  const inputMusica = document.getElementById("novaMusica");
+  const inputArtista = document.getElementById("novoArtista");
+
+  const nome = inputMusica.value.trim();
+  const artista = inputArtista.value.trim();
+
+  if (nome === "") {
+    alert("Digite o nome da música ❤️");
+    return;
+  }
+
+  musicasSalvas.push({
+    nome: nome,
+    artista: artista || "Artista não informado"
+  });
+
+  localStorage.setItem(
+    "musicasAmor",
+    JSON.stringify(musicasSalvas)
+  );
+
+  inputMusica.value = "";
+  inputArtista.value = "";
+
+  mostrarMusicas();
+}
+
+function mostrarMusicas() {
+  const lista = document.getElementById("listaMusicas");
+
+  if (!lista) return;
+
+  lista.innerHTML = "";
+
+  musicasSalvas.forEach((musica, index) => {
+    const item = document.createElement("div");
+    item.className = "item-musica";
+
+    item.innerHTML = `
+      <strong>🎵 ${musica.nome}</strong>
+      <span>${musica.artista}</span>
+      <button class="btn-apagar" onclick="apagarMusica(${index})">
+        Apagar
+      </button>
+    `;
+
+    lista.appendChild(item);
+  });
+}
+
+function apagarMusica(index) {
+  musicasSalvas.splice(index, 1);
+
+  localStorage.setItem(
+    "musicasAmor",
+    JSON.stringify(musicasSalvas)
+  );
+
+  mostrarMusicas();
+}
+
+mostrarMensagens();
+mostrarMusicas();
