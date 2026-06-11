@@ -157,30 +157,24 @@
 </section>
 
 <section class="editable-card">
-  <h2>🎵 Músicas Especiais</h2>
+  <h2>💌 Mensagens adicionadas</h2>
 
-  <input type="text" id="novaMusica"
-         placeholder="Nome da música">
+  <textarea id="novaMensagem" placeholder="Escreva uma mensagem..."></textarea>
 
-  <button onclick="adicionarMusica()">
-    Adicionar
-  </button>
+  <button onclick="adicionarMensagem()">Adicionar mensagem</button>
 
-  <ul id="listaMusicas"></ul>
-</section> 
+  <div id="listaMensagens" class="lista-mensagens"></div>
+</section>
 
 <section class="editable-card">
-  <h2>🎯 Nossos Sonhos</h2>
+  <h2>🎵 Músicas adicionadas</h2>
 
-  <input type="text"
-         id="metaCasal"
-         placeholder="Ex: Viajar para Gramado">
+  <input type="text" id="novaMusica" placeholder="Nome da música">
+  <input type="text" id="novoArtista" placeholder="Nome do artista">
 
-  <button onclick="adicionarMeta()">
-    Adicionar
-  </button>
+  <button onclick="adicionarMusica()">Adicionar música</button>
 
-  <ul id="listaMetas"></ul>
+  <div id="listaMusicas" class="lista-musicas"></div>
 </section>
 
 
